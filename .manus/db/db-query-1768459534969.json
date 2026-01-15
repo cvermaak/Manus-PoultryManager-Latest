@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, flockNumber, targetCatchingWeight, targetDeliveredWeight FROM flocks WHERE targetCatchingWeight IS NOT NULL LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute SELECT id, flockNumber, targetCatchingWeight, targetDeliveredWeight FROM flocks WHERE targetCatchingWeight IS NOT NULL LIMIT 5;",
+  "rows": [
+    {
+      "id": "870001",
+      "flockNumber": "FL-DF-2025-TRAIL",
+      "targetCatchingWeight": "2.646",
+      "targetDeliveredWeight": "2.500"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tflockNumber\ttargetCatchingWeight\ttargetDeliveredWeight\n870001\tFL-DF-2025-TRAIL\t2.646\t2.500\n",
+  "stderr": "",
+  "execution_time_ms": 65
+}

@@ -1,0 +1,8 @@
+{
+  "query": "\nINSERT INTO flocks (flockNumber, houseId, placementDate, initialCount, currentCount, targetSlaughterWeight, weightUnit, growingPeriod, targetDeliveredWeight, targetCatchingWeight, status)\nVALUES ('FL-CHART-TEST-2026', 10001, DATE_SUB(CURDATE(), INTERVAL 25 DAY), 20000, 19500, '1.70', 'kg', 42, '2.500', '2.646', 'active');\n\nSELECT flockId, flockNumber, placementDate, DATEDIFF(CURDATE(), placementDate) as age_days FROM flocks WHERE flockNumber = 'FL-CHART-TEST-2026';\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute \nINSERT INTO flocks (flockNumber, houseId, placementDate, initialCount, currentCount, targetSlaughterWeight, weightUnit, growingPeriod, targetDeliveredWeight, targetCatchingWeight, status)\nVALUES ('FL-CHART-TEST-2026', 10001, DATE_SUB(CURDATE(), INTERVAL 25 DAY), 20000, 19500, '1.70', 'kg', 42, '2.500', '2.646', 'active');\n\nSELECT flockId, flockNumber, placementDate, DATEDIFF(CURDATE(), placementDate) as age_days FROM flocks WHERE flockNumber = 'FL-CHART-TEST-2026';\n",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1452 (23000) at line 2: Cannot add or update a child row: a foreign key constraint fails (`swqcxo7pxw6r8kkqwzsjsv`.`flocks`, CONSTRAINT `flocks_houseId_houses_id_fk` FOREIGN KEY (`houseId`) REFERENCES `houses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)"
+  ]
+}

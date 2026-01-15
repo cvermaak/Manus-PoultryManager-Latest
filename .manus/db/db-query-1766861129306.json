@@ -1,0 +1,31 @@
+{
+  "query": "SELECT id, email, username, loginMethod, role FROM users LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute SELECT id, email, username, loginMethod, role FROM users LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "email": "clinton.vermaak@gmail.com",
+      "username": "NULL",
+      "loginMethod": "google",
+      "role": "admin"
+    },
+    {
+      "id": "6060013",
+      "email": "brendonvermaak1@gmail.com",
+      "username": "brendonvermaak",
+      "loginMethod": "email",
+      "role": "admin"
+    },
+    {
+      "id": "6060033",
+      "email": "clinton.vermaak@afrisaff.com",
+      "username": "testuser",
+      "loginMethod": "email",
+      "role": "farm_manager"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tusername\tloginMethod\trole\n1\tclinton.vermaak@gmail.com\tNULL\tgoogle\tadmin\n6060013\tbrendonvermaak1@gmail.com\tbrendonvermaak\temail\tadmin\n6060033\tclinton.vermaak@afrisaff.com\ttestuser\temail\tfarm_manager\n",
+  "stderr": "",
+  "execution_time_ms": 189
+}

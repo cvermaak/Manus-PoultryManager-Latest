@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, username, email, name, role, isActive, mustChangePassword, createdAt \nFROM users \nWHERE passwordHash IS NOT NULL \nORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute SELECT id, username, email, name, role, isActive, mustChangePassword, createdAt \nFROM users \nWHERE passwordHash IS NOT NULL \nORDER BY id;",
+  "rows": [
+    {
+      "id": "6060013",
+      "username": "brendonvermaak",
+      "email": "brendonvermaak1@gmail.com",
+      "name": "Brendon Vermaak",
+      "role": "admin",
+      "isActive": "1",
+      "mustChangePassword": "0",
+      "createdAt": "2025-12-19 12:19:54"
+    },
+    {
+      "id": "6060033",
+      "username": "testuser",
+      "email": "clinton.vermaak@afrisaff.com",
+      "name": "Test user",
+      "role": "farm_manager",
+      "isActive": "1",
+      "mustChangePassword": "1",
+      "createdAt": "2025-12-19 12:29:27"
+    },
+    {
+      "id": "6990050",
+      "username": "test",
+      "email": "test@test.com",
+      "name": "testnew",
+      "role": "admin",
+      "isActive": "1",
+      "mustChangePassword": "1",
+      "createdAt": "2025-12-27 19:03:56"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tusername\temail\tname\trole\tisActive\tmustChangePassword\tcreatedAt\n6060013\tbrendonvermaak\tbrendonvermaak1@gmail.com\tBrendon Vermaak\tadmin\t1\t0\t2025-12-19 12:19:54\n6060033\ttestuser\tclinton.vermaak@afrisaff.com\tTest user\tfarm_manager\t1\t1\t2025-12-19 12:29:27\n6990050\ttest\ttest@test.com\ttestnew\tadmin\t1\t1\t2025-12-27 19:03:56\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}

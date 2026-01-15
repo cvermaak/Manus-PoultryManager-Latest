@@ -1,0 +1,9 @@
+{
+  "query": "DELETE fdr FROM flock_daily_records fdr INNER JOIN flocks f ON fdr.flockId = f.id WHERE f.flockNumber LIKE 'FL-CHART%'; DELETE FROM flocks WHERE flockNumber LIKE 'FL-CHART%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute DELETE fdr FROM flock_daily_records fdr INNER JOIN flocks f ON fdr.flockId = f.id WHERE f.flockNumber LIKE 'FL-CHART%'; DELETE FROM flocks WHERE flockNumber LIKE 'FL-CHART%';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 86
+}

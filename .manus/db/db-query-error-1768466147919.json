@@ -1,0 +1,8 @@
+{
+  "query": "DELETE FROM flocks WHERE flockNumber LIKE 'FL-CHART%'; SELECT COUNT(*) as deleted FROM flocks WHERE flockNumber LIKE 'FL-CHART%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute DELETE FROM flocks WHERE flockNumber LIKE 'FL-CHART%'; SELECT COUNT(*) as deleted FROM flocks WHERE flockNumber LIKE 'FL-CHART%';",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1451 (23000) at line 1: Cannot delete or update a parent row: a foreign key constraint fails (`swqcxo7pxw6r8kkqwzsjsv`.`flock_daily_records`, CONSTRAINT `flock_daily_records_flockId_flocks_id_fk` FOREIGN KEY (`flockId`) REFERENCES `flocks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)"
+  ]
+}

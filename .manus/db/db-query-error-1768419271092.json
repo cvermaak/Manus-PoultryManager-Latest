@@ -1,0 +1,8 @@
+{
+  "query": "SELECT COUNT(*) as record_count FROM daily_records WHERE flock_id = (SELECT id FROM flocks WHERE flockNumber = 'FL-DF-2025-TRAIL');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute SELECT COUNT(*) as record_count FROM daily_records WHERE flock_id = (SELECT id FROM flocks WHERE flockNumber = 'FL-DF-2025-TRAIL');",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1146 (42S02) at line 1: Table 'swqcxo7pxw6r8kkqwzsjsv.daily_records' doesn't exist"
+  ]
+}

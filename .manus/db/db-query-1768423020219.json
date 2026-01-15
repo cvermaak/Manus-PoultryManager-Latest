@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE flocks \nADD COLUMN targetDeliveredWeight decimal(10,3) COMMENT 'Target weight at processor after shrinkage (kg)',\nADD COLUMN targetCatchingWeight decimal(10,3) COMMENT 'Target weight on farm before shrinkage (kg)';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute ALTER TABLE flocks \nADD COLUMN targetDeliveredWeight decimal(10,3) COMMENT 'Target weight at processor after shrinkage (kg)',\nADD COLUMN targetCatchingWeight decimal(10,3) COMMENT 'Target weight on farm before shrinkage (kg)';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 781
+}

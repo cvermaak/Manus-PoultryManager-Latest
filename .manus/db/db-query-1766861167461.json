@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, email, username, passwordHash, loginMethod FROM users WHERE username = 'brendonvermaak';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4WYXdTZ2RFuJQah.8fcf44c6f992 --database SwQCxo7pxW6R8kkqwZSJsv --execute SELECT id, email, username, passwordHash, loginMethod FROM users WHERE username = 'brendonvermaak';",
+  "rows": [
+    {
+      "id": "6060013",
+      "email": "brendonvermaak1@gmail.com",
+      "username": "brendonvermaak",
+      "passwordHash": "$2b$12$JG5XrdkMHduBuFEYw/KR5OqO5Lgd/MvWmmSd59ijZgrHC3W9l0Qzm",
+      "loginMethod": "email"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tusername\tpasswordHash\tloginMethod\n6060013\tbrendonvermaak1@gmail.com\tbrendonvermaak\t$2b$12$JG5XrdkMHduBuFEYw/KR5OqO5Lgd/MvWmmSd59ijZgrHC3W9l0Qzm\temail\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

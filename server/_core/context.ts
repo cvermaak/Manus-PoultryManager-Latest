@@ -1,26 +1,18 @@
 import type { Request, Response } from "express";
 import { db } from "../db";
-import { users } from "../db/schema";
+import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
 
 export type TrpcContext = {
-  req: Request;
-  res: Response;
-  user: {
+  user: null | {
     id: number;
-    email: string;
     role: string;
-  } | null;
+  };
 };
 
-export async function createContext({
-  req,
-  res,
-}: {
-  req: Request;
-  res: Response;
-}): Promise<TrpcContext> {
-  const userId = req.session.userId;
+export async function createContext() {
+  return { user: null };
+}
 
   if (!userId) {
     return {

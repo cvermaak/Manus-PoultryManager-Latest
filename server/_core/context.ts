@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { db } from "../db";
+import { getDb } from "../db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
 
@@ -13,22 +13,17 @@ export type TrpcContext = {
   } | null;
 };
 
-export async function createContext({
-  req,
-  res,
-}: {
-  req: Request;
-  res: Response;
-}): Promise<TrpcContext> {
-  const userId = req.session?.userId;
+export async function createContext({ req }: { req: any }) {
+  const db = await getDb();
 
-  if (!userId) {
-    return {
-      req,
-      res,
-      user: null,
-    };
-  }
+  return {
+    db,
+    req,
+    user: null, // or however you're resolving auth
+  };
+}
+
+export type TrpcContext = Awaited<ReturnType<typeof createContext>>;
 
   const user = await db.query.users.findFirst({
     where: eq(users.id, userId),

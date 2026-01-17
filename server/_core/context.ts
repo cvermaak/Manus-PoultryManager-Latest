@@ -41,4 +41,3 @@ export type TrpcContext = Awaited<ReturnType<typeof createContext>>;
     res,
     user: user ?? null,
   };
-}

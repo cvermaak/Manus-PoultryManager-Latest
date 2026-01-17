@@ -3,6 +3,8 @@ import { getDb } from "../db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
 
+const db = await getDb();
+
 export type TrpcContext = {
   req: Request;
   res: Response;

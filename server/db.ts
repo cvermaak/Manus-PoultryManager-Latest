@@ -1,5 +1,6 @@
 import { eq, and, gte, lte, desc, asc, sql, or, like, inArray, isNotNull } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
+export const db = drizzle(process.env.DATABASE_URL!);
 import {
   InsertUser,
   users,

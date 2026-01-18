@@ -12,16 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   
-  <script>
-  if (
-    "%VITE_ANALYTICS_ENDPOINT%" &&
-    "%VITE_ANALYTICS_WEBSITE_ID%" &&
-    "%VITE_ANALYTICS_ENDPOINT%".startsWith("http")
-  ) {
+ <script type="module">
+  const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT;
+  const siteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID;
+
+  if (endpoint && siteId && endpoint.startsWith("http")) {
     const s = document.createElement("script");
-    s.src = "%VITE_ANALYTICS_ENDPOINT%/umami";
+    s.src = `${endpoint}/umami`;
     s.defer = true;
-    s.setAttribute("data-website-id", "%VITE_ANALYTICS_WEBSITE_ID%");
+    s.setAttribute("data-website-id", siteId);
     document.head.appendChild(s);
   }
 </script>

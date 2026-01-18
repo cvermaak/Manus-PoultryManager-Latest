@@ -41,7 +41,7 @@ queryClient.getMutationCache().subscribe(event => {
 const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
-      url: `${getApiBaseUrl()}/api/trpc`,
+      url: "/api/trpc",
       transformer: superjson,
       fetch(input, init) {
         return fetch(input, {

@@ -11,16 +11,12 @@ import { getApiBaseUrl } from "@/lib/apiBase";
 
 const queryClient = new QueryClient();
 
-const redirectToLoginIfUnauthorized = (error: unknown) => {
-  if (!(error instanceof TRPCClientError)) return;
-  if (typeof window === "undefined") return;
-
-  const isUnauthorized = error.message === UNAUTHED_ERR_MSG;
-
-  if (!isUnauthorized) return;
-
-  window.location.href = getLoginUrl();
+const redirectToLoginIfUnauthorized = () => {
+  // TEMP: just go to a local login page
+  window.location.href = "/login";
 };
+
+
 
 queryClient.getQueryCache().subscribe(event => {
   if (event.type === "updated" && event.action.type === "error") {
